@@ -1,0 +1,7 @@
+#https://stackoverflow.com/questions/35689628/starting-a-shell-in
+#-the-docker-alpine-container/43564198#43564198
+#-i --interactive -> keeps the stdin open even if not attached
+#-t -> --tty -> allocates a pseudocode TTY.
+#rm -> removes the container when it exits
+
+docker run -it --rm alpine /bin/sh

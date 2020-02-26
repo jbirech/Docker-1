@@ -1,0 +1,11 @@
+#docker exec -> command run a new command on a running window
+#--env, -e -> Set an environment variable
+#check the result by -> curl $(docker-machine ip Char):3000i
+#working sometimes, not working sometimes.
+
+
+docker-machine ssh Char mkdir /home/flask
+docker-machine scp hello.py Char:/home/flask
+docker run -dit --name Abathur -v /home/flask:/root -p $(docker-machine ip Char):3000:3000 python:2-slim
+docker exec Abathur pip install flask
+docker exec --env FLASK_APP='/root/hello.py' Abathur flask run --host=0.0.0.0 --port=3000

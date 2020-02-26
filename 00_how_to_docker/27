@@ -1,0 +1,5 @@
+#https://docs.docker.com/engine/reference/commandline/service_ps/
+
+#docker service logs -f $(docker ps engineering-bay -f "name=engineering-bay" -q)
+
+docker service logs   engineering-bay

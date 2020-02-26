@@ -1,0 +1,3 @@
+#-f -> follow in real time
+
+docker logs -f spawning-pool

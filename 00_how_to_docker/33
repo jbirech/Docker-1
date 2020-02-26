@@ -1,0 +1,2 @@
+#rmi removes image
+docker rmi $(docker images -a -q)

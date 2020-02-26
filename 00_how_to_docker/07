@@ -1,0 +1,5 @@
+#https://linuxconfig.org/how-to-retrieve-docker-container-s-inter
+#nal-ip-address
+#docker inspect -f --help
+
+docker inspect -f '{{.NetworkSettings.IPAddress}}' overlord
